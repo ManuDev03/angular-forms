@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'forms-app';
-  onSubmit(form:NgForm){
-    console.log(form.value)
-
-  }
+ 
 }
