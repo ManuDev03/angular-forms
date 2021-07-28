@@ -2,7 +2,3 @@
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-
-input.ng-invalid.ng-touched{
-    border: 1px solid red;
-  }
