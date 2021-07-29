@@ -18,13 +18,14 @@ export class AppComponent implements OnInit{
     this.signupform = new FormGroup({
       'userData': new FormGroup({
       'username': new FormControl(null,[Validators.required,this.forbiddenNames.bind(this)]),
-      'email': new FormControl(null,[Validators.required,Validators.email],this.forbiddenEmails)
+      'email': new FormControl(null,[Validators.required,Validators.email],this.forbiddenEmails )
       }),
       
       'gender': new FormControl('male'),
       'hobbies': new FormArray([])
 
     })
+    this.signupform.statusChanges.subscribe((status)=>console.log(status))
   }
 
   onSubmit(){
