@@ -26,10 +26,20 @@ export class AppComponent implements OnInit{
 
     })
     this.signupform.statusChanges.subscribe((status)=>console.log(status))
+
+    this.signupform.setValue({
+      'userData':{
+        'username':"Max",
+        'email':"max03@gmail.com"
+      },
+      'gender': 'male',
+      'hobbies':[]
+    })
   }
 
   onSubmit(){
     console.log(this.signupform.value)
+    this.signupform.reset()
   }
   onAddHobby(){
     const control = new FormControl(null,Validators.required);
